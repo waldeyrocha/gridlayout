@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+
+
+  .head {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    grid-column: 1 / 7;
+    text-align: center;
+  }
+
+  .navegation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+
+  .navegation ul li {
+    display: inline;
+  }
+
+  .navegation ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+  }
+
+  .container {
+    grid-column: 1 / 6;
+    margin: 20px;
+  }
+
+  .navegation {
+      grid-column: 1 / 7;
+    }
+
+  .box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    grid-column: 2 / 5;
+    display: none;
+  }
+
+  .card h3 {
+    margin-top: 0;
+  }
+
+  .img {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+  }
+
+
+  /* layout para desktop a 6 columnas */
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto;
+      gap: 10px;
+    }
+
+    .head {
+      grid-column: 1 / 7;
+      text-align: center;
+    }
+
+
+    .navegation {
+      grid-column: 1 / 7;
+    }
+
+    .container {
+    
+      grid-column: 1 / 6;
+    
+    }
+
+
+
+    .card {
+      grid-column: 6 / 6;
+      margin-top: 20px;
+      margin-right: 10px;
+      display: block;
+    }
+    .two {
+      grid-row: 3 / 3;
+    }
+
+    .box {
+      margin-bottom: 20px;
+    }
+
+  }
+
+
+
+  footer {
+    grid-column: 1 / 7;
+  }
+
+  article {
+    margin-bottom: 20px;
+    text-align: center;
+    height: 100px;
+  }
+
+  
+  
+
+
+</style>
+
+<body>
+
+  <div class="grid">
+    <header class="head">
+      <h1>My Website</h1>
+      <p>Resize the browser window to see the efect</p>
+    </header>
+
+    <nav class="navegation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <section class="box ">
+        <h2>Section</h2>
+        <article><img src="images/pink-moon.svg" alt=""></article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rerum architecto amet esse placeat
+          dolor,
+          perferendis ex praesentium nostrum cumque, autem sequi veniam laborum inventore.</p>
+      </section>
+      <section class="box">
+        <h2>Section</h2>
+        <article><img src="images/blue-moon.svg" alt=""></article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rerum architecto amet esse placeat
+          dolor,
+          perferendis ex praesentium nostrum cumque, autem sequi veniam laborum inventore.</p>
+      </section>
+      <section class="box">
+        <h2>Section</h2>
+        <article><img src="images/yellow-moon.svg" alt=""></article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rerum architecto amet esse placeat
+          dolor,
+          perferendis ex praesentium nostrum cumque, autem sequi veniam laborum inventore.</p>
+      </section>
+    </main>
+
+    <aside class="card first">
+      <h3>About me</h3>
+      <div class="img"></div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rerum architecto amet esse placeat dolor,
+        perferendis ex praesentium nostrum cumque, autem sequi veniam laborum inventore.</p>
+    </aside>
+
+    <aside class="card two">
+      <h3>Popular Post</h3>
+      <div class="img"></div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rerum architecto amet esse placeat dolor,
+        perferendis ex praesentium nostrum cumque, autem sequi veniam laborum inventore.</p>
+    </aside>
+
+    <aside class="card three">
+      <h3>Popular Post</h3>
+      <div class="img"></div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rerum architecto amet esse placeat dolor,
+        perferendis ex praesentium nostrum cumque, autem sequi veniam laborum inventore.</p>
+    </aside>
+
+    <footer>
+      <h1>footer</h1>
+    </footer>
+
+
+  </div>
+
+
+</body>
+
+</html>
